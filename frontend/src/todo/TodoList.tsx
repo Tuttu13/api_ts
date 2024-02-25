@@ -8,6 +8,7 @@ import { updateTodo } from "./api/api";
 import { TodoState } from "./types";
 
 import { useLocation } from "react-router-dom";
+import AddTodo from "./components/TodoAdd";
 import useModalRoute from "./hooks/useModalRoute";
 
 interface TodoListProps {
@@ -114,6 +115,7 @@ const TodoList: React.FC<TodoListProps> = (props) => {
           ))}
         </Box>
       </Box>
+      <AddTodo todos={props.todos} setTodos={props.setTodos} />
     </Box>
   );
 };
